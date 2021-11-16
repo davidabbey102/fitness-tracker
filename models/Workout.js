@@ -1,6 +1,12 @@
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
+mongoose.connect('mongodb://localhost/workout', {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+});
+
 const WorkoutSchema = new Schema({
     day: {
         type: Date,
@@ -37,7 +43,11 @@ const WorkoutSchema = new Schema({
             type: Number,
             default: 0
         },
-    }]
+    }],
+    totalDuration: {
+        type: Number,
+        default: 0
+    }
 })
 
 const Workout = mongoose.model("Workout", WorkoutSchema)
