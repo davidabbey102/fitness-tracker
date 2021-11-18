@@ -47,16 +47,15 @@ router.post("/api/workouts", ({ body }, res) => {
 router.get("/api/workouts/range", (req, res) => {
     db.aggregate(
         [
-            { $match: {} },
-            { $sort: { day: -1 } },
-            { limit: 7 },
             {
                 $addFields: {
-                    totalWeight: { $sum: "$exercises.weight" },
                     totalDuration: { $sum: "$exercises.duration" }
                 }
             }
-        ]).then(dbData => {
+        ])
+        .sort({_id: -1})
+        .limit(7) 
+        .then(dbData => {
             res.json(dbData)
         }).catch(err => {
             console.log(err)
