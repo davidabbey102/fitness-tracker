@@ -10,7 +10,7 @@ mongoose.connect('mongodb://localhost/workout', {
 const WorkoutSchema = new Schema({
     day: {
         type: Date,
-        default: Date.now()
+        default: Date.now
     },
     exercises: [{
         name: {
@@ -43,11 +43,7 @@ const WorkoutSchema = new Schema({
             type: Number,
             default: 0
         },
-    }],
-    totalDuration: {
-        type: Number,
-        default: 0
-    }
+    }]
 })
 
 const Workout = mongoose.model("Workout", WorkoutSchema)
