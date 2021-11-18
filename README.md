@@ -25,7 +25,10 @@ Fitness trackiong made easy. This app will keep track of the exercises in your w
 
 ## Usage
 
-![image](https://user-images.githubusercontent.com/90018131/142081734-65464b36-d7c0-463a-80a8-d0e1cd162f40.png)
+![image of dashboard working](https://user-images.githubusercontent.com/90018131/142512834-e4455231-e0f6-4898-8fc8-e1839fa2b220.png)
+
+
+![image with last workout info](https://user-images.githubusercontent.com/90018131/142512893-423920db-221f-4109-9efb-0ca0a07f6d47.png)
 
 ## Credits
 
